@@ -35,6 +35,10 @@
 
   scroll-behavior: smooth;
 }
+#menu-nav svg {
+  padding: 10px;
+  max-width: 160px;
+}
 #menu-nav .button-entrar {
   font-size: 0.75rem;
   font-weight: 700;
@@ -189,6 +193,17 @@ footer span {
 }
 
 @media screen and (max-width: 480px) {
+  #menu-nav {
+    align-content: center;
+  }
+  #menu-nav svg {
+    width: 35%;
+    padding-top: 18px;
+  }
+  #menu-nav .button-plano {
+    letter-spacing: normal;
+    padding: 10px 10px;
+  }
   #content-logo .items-logo {
     display: flex;
     flex-wrap: wrap;

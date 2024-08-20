@@ -40,7 +40,10 @@
 body {
   background: var(--primary-color);
 }
-
+#menu-nav svg {
+  padding: 13px 10px 20px;
+  max-width: 160px;
+}
 #menu-nav {
   width: 100%;
   display: flex;
@@ -52,6 +55,7 @@ body {
   justify-content: space-between;
   background-color: var(--nav-bg-color);
 }
+
 #menu-nav .button-entrar {
   font-size: 0.75rem;
   font-weight: 700;
@@ -405,6 +409,17 @@ footer span {
   }
 }
 @media screen and (max-width: 480px) {
+  #menu-nav {
+    align-content: center;
+  }
+  #menu-nav svg {
+    width: 35%;
+    padding-top: 18px;
+  }
+  #menu-nav .button-plano {
+    letter-spacing: normal;
+    padding: 10px 10px;
+  }
   #content-logo .items-logo {
     display: flex;
     flex-wrap: wrap;
