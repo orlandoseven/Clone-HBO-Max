@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  color: var(--text-color);
+}
+:root {
+  --primary-color: #020228;
+  --secondary-color: #ff00e5;
+  --tertiary-color: #b535f6;
+  --btn-bg-color-gradient: linear-gradient(
+    45deg,
+    #9b34ef 0%,
+    #490cb0 20%,
+    transparent 50%
+  );
+  --btn-link-bg-color: #fff;
+  --btn-link-color: #000;
+  --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+  --divider-bg-color: linear-gradient(
+    90deg,
+    #5516ba,
+    rgba(255, 0, 229, 0.5) 80%
+  );
+  --nav-bg-color: rgba(0, 0, 0, 0.3);
+  --text-color: #fff;
+  --link-color: #9e86ff;
+  --form-bg-color: rgba(211, 211, 211, 0.06);
+  --form-field-bg-color: rgba(0, 0, 0, 0.2);
+  --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+  --form-field-placeholder: rgba(255, 255, 255, 0.7);
+  --form-field-error: rgb(255, 76, 76);
+
+  scroll-behavior: smooth;
+}
+#menu-nav .button-entrar {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-color);
+  letter-spacing: 2px;
+  margin-right: 24px;
+}
+#menu-nav {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--nav-bg-color);
+}
+#menu-nav .button-plano {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-color);
+  letter-spacing: 2px;
+  background: var(--tertiary-color);
+  padding: 10px 28px;
+  margin-right: 24px;
+  border-radius: 25px;
+}
+#menu-nav .button-plano:hover {
+  background: var(--btn-link-bg-color);
+  color: var(--btn-link-color);
+  transition: 1s;
+}
+
+body {
+  background: var(--primary-color);
+  background-image: url("../img/background-movies-series.png");
+  background-size: cover;
+}
+main {
+  padding: 14px;
+}
+
+#conteiner_form {
+  width: 100%;
+  max-width: 650px;
+  position: relative;
+  background-color: var(--form-bg-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 100px auto 100px;
+}
+#conteiner_form h4 {
+  font-size: 1.25rem;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+#conteiner_form p {
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+#conteiner_form form {
+  display: flex;
+  flex-direction: column;
+}
+#conteiner_form input {
+  padding: 10px;
+  background-color: var(--form-field-bg-color);
+  border-color: var(--form-field-border);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+#conteiner_form input:focus {
+  outline: 2px double var(--link-color);
+}
+#conteiner_form input:invalid {
+  border: 1px double red;
+}
+#conteiner_form button {
+  margin: 10px 25px 0 0;
+  border-radius: 20px;
+  padding: 10px 30px;
+  background: var(--btn-bg-color-gradient);
+  background-size: 250%;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: none;
+  transition: transform 1s, outline 1s, background 1s;
+}
+#conteiner_form button:hover {
+  background-color: transparent;
+  background-position: 100%;
+  outline: 2px solid var(--secondary-color);
+  transform: scale(1.05);
+}
+#conteiner_form a {
+  font-size: 0.85rem;
+  color: var(--link-color);
+  font-weight: bold;
+}
+/*FOOTER*/
+footer {
+  margin: auto;
+  text-align: center;
+  color: var(--link-color);
+}
+.info_footer {
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+.info_footer a {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--link-color);
+  letter-spacing: 2px;
+  margin: 0 16px;
+  word-break: normal;
+}
+.info_footer a:hover {
+  filter: brightness(30%);
+}
+
+footer span {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.75rem;
+  color: var(--link-color);
+}
+.social_icones {
+  margin: 40px 0 30px;
+  letter-spacing: 40px;
+}
+.social_icones img:hover {
+  filter: brightness(30%);
+}
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+@media screen and (max-width: 480px) {
+  #content-logo .items-logo {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .info_footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .info_footer a {
+    margin-bottom: 15px;
+  }
+}
